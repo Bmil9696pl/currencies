@@ -6,7 +6,7 @@ public class Exchange implements IExchange{
     @Override
     public double exchange(ICurrency src, ICurrency tgt, double amt) {
         double ret;
-        double rate = tgt.getRate() / src.getRate();
+        double rate = src.getRate() / tgt.getRate();
         ret = rate * amt;
         return ret;
     }
